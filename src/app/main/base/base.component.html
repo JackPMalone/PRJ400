@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="deviceList">
+        @for (device of testDevices; track $index) {
+            <app-main-device [device]="testDevices"></app-main-device>
+        }
+        <app-main-device [device]="{'default':true}"></app-main-device>
+    </div>
+
+    <button type="button"(click)="UpdateChart()">UPDATE</button>
+
+    <div class="chart-container">
+        <canvas id="MyChart">
+            {{chart}}
+        </canvas>
+    </div>
+    
+
+    <button type="button" (click)="GenerateData()">Generate data</button>
+</div>

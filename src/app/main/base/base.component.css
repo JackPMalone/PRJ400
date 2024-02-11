@@ -1,0 +1,6 @@
+.deviceList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1rem));
+    gap: 20px;
+    justify-content: flex-start;
+}
