@@ -43,4 +43,4 @@ Thumbs.db
 
 # Firebase files
 firebase-debug.log
-api-keys.json
+src/app/environments/firebase/firebase.ts
