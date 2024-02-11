@@ -18,8 +18,8 @@ const logger = require("firebase-functions/logger");
 //   response.send("Hello from Firebase!");
 // });
 
-import * as functions from 'firebase-functions'
+const functions = require('firebase-functions')
 
-export const helloWorld = functions.https.onRequest((request, response) =>{
-    response.send('Hello from Firebase!')
-})
+exports.helloWorld = functions.https.onRequest((request, response) => {
+    response.send('Hello from Firebase!');
+});
