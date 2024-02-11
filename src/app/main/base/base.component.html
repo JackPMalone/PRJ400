@@ -1,9 +1,9 @@
 <div class="container">
     <div class="deviceList">
         @for (device of testDevices; track $index) {
-            <app-device [device]="testDevices"></app-device>
+            <app-main-device [device]="testDevices"></app-main-device>
         }
-        <app-device [device]="{'default':true}"></app-device>
+        <app-main-device [device]="{'default':true}"></app-main-device>
     </div>
 
     <button type="button"(click)="UpdateChart()">UPDATE</button>
