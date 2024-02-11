@@ -42,4 +42,5 @@ testem.log
 Thumbs.db
 
 functions/node_modules
+firebase-debug.log
 src/app/environments/firebase/firebase.ts

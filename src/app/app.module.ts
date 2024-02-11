@@ -9,6 +9,11 @@ import { DeviceComponent } from './main/device/device.component';
 
 import { NgChartsModule } from 'ng2-charts';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
+import { Environments } from './environments/environments';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,10 @@ import { NgChartsModule } from 'ng2-charts';
     AppRoutingModule,
     BrowserModule,
     CommonModule,
-    NgChartsModule
+    NgChartsModule,
+    AngularFireModule.initializeApp(Environments.firebase.firebaseConfig),
+    AngularFirestoreModule,
+    AppRoutingModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
