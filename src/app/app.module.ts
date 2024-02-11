@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BaseComponent } from './main/base/base.component';
 import { DeviceComponent } from './main/device/device.component';
 
+import { NgChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { DeviceComponent } from './main/device/device.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
