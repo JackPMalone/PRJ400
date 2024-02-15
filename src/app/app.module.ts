@@ -13,12 +13,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { Environments } from './environments/environments';
+import { LoginComponent } from './Auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseComponent,
-    DeviceComponent
+    DeviceComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
