@@ -16,6 +16,7 @@ import { Environments } from './environments/environments';
 import { LoginComponent } from './auth/login/login.component';
 
 import { BaseComponent as AuthBase } from './auth/base/base.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BaseComponent as AuthBase } from './auth/base/base.component';
     BaseComponent,
     DeviceComponent,
     LoginComponent,
-    AuthBase
+    AuthBase,
+    SignupComponent
   ],
   imports: [
     AppRoutingModule,
