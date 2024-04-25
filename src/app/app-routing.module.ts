@@ -6,7 +6,7 @@ import { BaseComponent as MainBase } from './main/base/base.component';
 import { BaseComponent as AuthBase } from './auth/base/base.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'home', component: MainBase },
   { path: 'login', component: AuthBase }
 ];

@@ -1,11 +1,22 @@
 .container{
     display: grid;
-    grid-template-areas: 
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
     "login signup";
+    gap: 10%;
+    width: 100%;
+    transform: translateY(70%)
 }
 
-@media screen and (max-width: 630px){
+.card:hover{
+    box-shadow: 0px 0px 20px black;
+    transform: scale(110%);
+}
+
+@media screen and (max-width: 660px){
     .container{
+        transform: translateY(0%);
         grid-template-areas:
         "login"
         "signup";
@@ -17,6 +28,7 @@
     height: 300px;
     display: grid;
     place-items: center;
+    transition: all .2s;
 }
 
 .login{
