@@ -20,9 +20,11 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "chart.js": "^4.4.1",
+    "firebase": "^10.10.0",
     "ng2-charts": "^5.0.4",
-    "firebase": "^10.8.0",
+    "ngx-sweetalert2": "^0.2.7",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.10.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },

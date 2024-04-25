@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, DatePipe } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,12 +14,19 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { Environments } from './environments/environments';
+import { LoginComponent } from './auth/login/login.component';
+
+import { BaseComponent as AuthBase } from './auth/base/base.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseComponent,
-    DeviceComponent
+    DeviceComponent,
+    LoginComponent,
+    AuthBase,
+    SignupComponent
   ],
   imports: [
     AppRoutingModule,
@@ -27,7 +35,9 @@ import { Environments } from './environments/environments';
     NgChartsModule,
     AngularFireModule.initializeApp(Environments.firebase.firebaseConfig),
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

@@ -1,0 +1,85 @@
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.input{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    "name"
+    "pass"
+    "btn";
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.email{
+    grid-area: name;
+}
+
+.password{
+    grid-area: pass;
+}
+
+.submit{
+    grid-area: btn;
+}
+
+.lbl{
+    position: absolute;
+}
+
+.submit{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 5px 5px -2px black;
+    cursor: auto;
+}
+
+button{
+    width:fit-content;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px black;
+    border: #0000;
+}
+
+button:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+button:active{
+    box-shadow: inset 5px 5px 7px black;
+}
+
+label{    
+    transform: translateY(-15px);
+}
