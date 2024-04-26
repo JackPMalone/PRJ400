@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Observable, map } from 'rxjs';
+import firebase from 'firebase/compat/app'
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +36,7 @@ export class FirebaseAuthService {
     return this.fireAuth.signOut();
   }
 
-  getCurrentUser(){
-    return this.fireAuth.authState;
+  getCurrentUserID(): string{
+    return firebase.auth().currentUser?.uid as string
   }
 }

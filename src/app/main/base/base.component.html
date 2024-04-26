@@ -1,19 +1,22 @@
 <div class="container">
     <div class="deviceList">
-        @for (device of testDevices; track $index) {
-            <app-main-device [device]="testDevices"></app-main-device>
+        @if (items !== undefined){
+            <app-main-device [device]="items"></app-main-device>
         }
-        <app-main-device [device]="{'default':true}"></app-main-device>
+        <!-- @for (device of testDevices; track $index) {
+            <app-main-device [device]="testDevices"></app-main-device>
+        } -->
+        <app-main-device style="cursor: pointer;" [device]="{'default':true}" (click)="NewDevice()"></app-main-device>
     </div>
 
-    <button type="button"(click)="UpdateChart()">UPDATE</button>
+    <!-- <button type="button"(click)="UpdateChart()">UPDATE</button> -->
 
-    <div class="chart-container">
+    <!-- <div class="chart-container">
         <canvas id="MyChart">
             {{chart}}
         </canvas>
-    </div>
+    </div> -->
     
 
-    <button type="button" (click)="GenerateData()">Generate data</button>
+    <button type="button" (click)="tests()">Generate data</button>
 </div>

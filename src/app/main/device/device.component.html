@@ -8,12 +8,12 @@
 }
 
 @else if (!device.default) {
-    <div class="card">
+    <div class="card" (click)="Change()">
         <img src="../../../assets/Images/oiltank.jpg" alt="oiltank.jpg">
         <div class="info">
-            <h1>{{device.name}}</h1>
-            <p>Battery: {{device.battery}}%</p>
-            <p>Level: {{device.level}}%</p>
+            <h1>{{GetName()}}</h1>
+            <p>{{device.data[0].date}}</p>
+            <p>Level: {{device.data[0].depth}}cm</p>
         </div>
     </div>
 }

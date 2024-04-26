@@ -1,0 +1,15 @@
+<div class="container card">
+    <form [formGroup]="newDev" (ngSubmit)="AddNewDevice()" class="input">
+        <div id="devName">
+            <label for="devName">Device Name</label>
+            <input type="text" name="devName" class="input" formControlName="devName">
+        </div>
+
+        <div id="devID">
+            <label for="devId" class="lbl">Device ID</label>
+            <input type="text" name="devId" class="input" formControlName="devID">
+        </div>
+
+        <button type="submit" id="addBtn">Double click<br>to confirm</button>
+    </form>
+</div>

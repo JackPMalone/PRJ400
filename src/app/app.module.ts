@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseComponent } from './main/base/base.component';
 import { DeviceComponent } from './main/device/device.component';
+import { BaseComponent as DeviceBase } from './new/base/base.component';
 
 import { NgChartsModule } from 'ng2-charts';
 
@@ -26,7 +27,8 @@ import { SignupComponent } from './auth/signup/signup.component';
     DeviceComponent,
     LoginComponent,
     AuthBase,
-    SignupComponent
+    SignupComponent,
+    DeviceBase
   ],
   imports: [
     AppRoutingModule,

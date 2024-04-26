@@ -3,16 +3,16 @@
         <form [formGroup]="signUp" (ngSubmit)="onSubmit()" class="input">
             <div class="signup email">
                 <label for="email" class="mail lbl">Email</label>
-                <input type="email" name="email" id="name" formControlName="email">
+                <input type="email" name="email" id="email" formControlName="email">
             </div>
     
             <div class="signup password">
-                <label for="password" class="pass lbl" formControlName="password">Password</label>
-                <input type="password" name="password" id="pass">
+                <label for="password" class="pass lbl">Password</label>
+                <input type="password" name="password" id="password" formControlName="password">
             </div>
 
             <div class="signup submit">
-                <button type="submit" id="submit">Sign Up</button>
+                <button type="submit" id="submit">Create Account</button>
             </div>
         </form>
     </div>

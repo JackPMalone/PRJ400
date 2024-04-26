@@ -16,29 +16,25 @@ export class SignupComponent implements OnInit {
 
   ngOnInit():void {
     this.signUp = this.fb.group({
-      email: ['', Validators.required, Validators.email],
-      password: ['', Validators.required, Validators.minLength(8)]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     })
   }
 
   onSubmit(){
-    this.router.navigateByUrl('/home')
-    console.log(this.signUp.value)
-    // if (this.signUp.valid){
-    //   this.signin()
-    //   return;
-    // }
+    if (this.signUp.valid){
+      this.signin()
+      return;
+    }
 
-    // if (this.signUp.value)
-
-    // alert('Invalid entries\nThere was an invalid input, please try entering in correct values');
+    alert('Invalid entries\nThere was an invalid input, please try entering in correct values');
   }
 
   async signin(){
-
     try{
       const user = await this.authService.signup(this.signUp.get('email')?.value, this.signUp.get('password')?.value);
       console.log('Logged in user:', user);
+      this.router.navigateByUrl('/home')
     } catch (err) {
       console.error('Login unsuccessful:', err);
     }

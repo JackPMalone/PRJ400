@@ -2,18 +2,20 @@
     <div class="cover">
         Log In
     </div>
-    <div class="input">
+
+    <form [formGroup]="logIn" (ngSubmit)="onSubmit()" class="input">
         <div class="login email">
-            <label for="" class="mail lbl">Email</label>
-            <input type="text" name="" id="name">
+            <label for="email" class="mail lbl">Email</label>
+            <input type="email" name="email" id="email" formControlName="email">
         </div>
 
         <div class="login password">
-            <label for="" class="pass lbl">Password</label>
-            <input type="password" name="" id="pass" [style.transform]="'background-color:green;'"></div>
+            <label for="password" class="pass lbl">Password</label>
+            <input type="password" name="password" id="password" formControlName="password">
+        </div>
 
         <div class="login submit">
-            <button type="submit" id="submit">Log In</button>
+            <button type="submit">Sign Back In</button>
         </div>
-    </div>
+    </form>
 </div>
